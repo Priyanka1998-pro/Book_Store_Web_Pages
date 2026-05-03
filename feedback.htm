@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+    <title>Ignou Home Page</title>
+    <style>
+        .header{
+            width:100%;
+            background-color: whitesmoke;
+            margin:0px;
+            padding:10px;
+            text-align:left;
+            
+        }
+        img{
+            width:100px;
+            height:100px;
+            border-radius: 52px;
+             
+        }
+        .header h1{
+            display: inline;
+            padding: 580px;
+            font-size: 50px;
+            font-family:cursive;
+        }
+        .header h1:hover{
+            color:skyblue;
+        }
+        .container{
+            display:flex;
+        }
+        .menu{
+            width:20%;
+            height:79vh;
+            background-color:lightskyblue;
+            display:flex;
+            flex-direction:column;
+        }
+        .menu a{
+            color: whitesmoke;
+            text-decoration: none;
+            padding:15px;
+            border-bottom: 1px solid #444;
+            text-align: center;
+            font-weight: bold;
+        }
+        .menu a:hover{
+            background:white;
+            color:black;
+        }
+        .feedback_box{
+            width:350px;
+            background: white;
+            margin:50px auto;
+            padding:20px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px gray;
+          }
+        h1{
+            text-align: center;
+            color: #333;
+          }
+          label{
+            font-weight: bold;
+           }
+           input{
+            width:100%;
+            padding:2px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+           }
+           button{
+            width:100%;
+            padding:10px;
+            background: greenyellow;
+            border-color: greenyellow;
+            color:white;
+            cursor: pointer;
+           }
+           button:hover{
+            background: green;
+           }
+        
+    </style>
+</head>
+<body>
+<div class="header">
+    <img src="book.jfif"/>
+    <h1>Book Store</h1>
+</div>
+<div class="container">
+        <nav class="menu">
+            <a href="index.htm">Home</a>
+            <a href="book_list.htm">List Of Books</a>
+            <a href="registration.htm">Customer Registration</a>
+            <a href="feedback.htm">Feedback</a>
+        </nav>
+    <div class="feedback_box">
+        <h1>FeedBack Form</h1>
+        <form onsubmit="return validateForm()" method="post">
+        <label>Email-Id</label><br>
+        <input type="text" id="mail" name="mail" placeholder="enter your Email-Id"/><br>
+        <label>Mobile Number</label><br>
+        <input type="number" id="number" name="number" placeholder="enter your contact number"/>
+        <br>
+        <label>Type Your Message</label><br>
+        <textarea rows="10" cols="43"></textarea>
+        <button type="submit">Submit Feedback</button>
+        <script>
+            function validateForm(){
+            let email=document.getElementById("mail").value;
+            let phone=document.getElementById("number").value;
+            if(email==""){
+                alert("Please enter your mail");
+            }
+             if(phone==""){
+                alert("Please enter your mobile number");
+            }
+        }
+        </script>
+</form>
+    </div>
+</div>
+</body>
+</html>

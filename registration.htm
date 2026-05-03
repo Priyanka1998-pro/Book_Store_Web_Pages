@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<head>
+    <title>Ignou Home Page</title>
+    <style>
+        .header{
+            width:100%;
+            background-color: whitesmoke;
+            margin:0px;
+            padding:10px;
+            text-align:left;
+            
+        }
+        img{
+            width:100px;
+            height:100px;
+            border-radius: 52px;
+             
+        }
+        .header h1{
+            display: inline;
+            padding: 580px;
+            font-size: 50px;
+            font-family:cursive;
+        }
+        .header h1:hover{
+            color:skyblue;
+        }
+        .container{
+            display:flex;
+        }
+        .menu{
+            width:20%;
+            height:79vh;
+            background-color:lightskyblue;
+            display:flex;
+            flex-direction:column;
+        }
+        .menu a{
+            color: whitesmoke;
+            text-decoration: none;
+            padding:15px;
+            border-bottom: 1px solid #444;
+            text-align: center;
+            font-weight: bold;
+        }
+        .menu a:hover{
+            background:white;
+            color:black;
+        }
+        .content{
+            padding:30px;
+        }
+        .form-box{
+            width:350px;
+            background: white;
+            margin:50px auto;
+            padding:20px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px gray;
+          }
+          h2{
+            text-align: center;
+            color: #333;
+          }
+           label{
+            font-weight: bold;
+           }
+           input,select{
+            width:100%;
+            padding:2px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+           }
+           button{
+            width:100%;
+        
+            padding:10px;
+            background: greenyellow;
+            border-color: greenyellow;
+            color:white;
+            cursor: pointer;
+           }
+           button:hover{
+            background: green;
+           }
+        
+    </style>
+</head>
+<body>
+<div class="header">
+    <img src="book.jfif"/>
+    <h1>Book Store</h1>
+</div>
+<div class="container">
+        <nav class="menu">
+            <a href="index.htm">Home</a>
+            <a href="book_list.htm">List Of Books</a>
+            <a href="registration.htm">Customer Registration</a>
+            <a href="feedback.htm">Feedback</a>
+        </nav>
+    <div class="form-box">
+<h2>Registration</h2>
+<form onsubmit="return validateForm()" method="post">
+            <label>Name:</label><br>
+            <input type="text" id="name" name="username" value="enter your name" required/>
+            <br><br>
+            <label>Email:</label><br>
+            <input type="email" name="emailid" value="enter your email id" required/><br>
+            <label>Phone:</label><br>
+            <input type="number" name="mobile number" value="enter your mobile number" required/><br>
+            <label>password:</label><br>
+            <input type="password" id="pass" name="pass" value="" required/><br>
+            <label>confirm password:</label><br>
+            <input type="password" name="confirm-pass" value="" required/><br>
+            <label>Gender:</label><br>
+            <label>Male</label><input type="radio" name="gender"/>
+            <label>Female</label><input type="radio" name="gender"/><br>
+            <label>city:</label>
+            <select name="city">
+                <option>--select--</option>
+                <option>lucknow</option>
+                <option>raipur</option>
+                <option>raygarh</option><br>
+            </select>
+            <button type="submit">Registration</button>
+            <script>
+                let name=document.getElementById("name").value;
+                let pass=document.getElementById("pass").value;
+                if(name==""||pass=="")
+            {
+             alert("all fields required");
+             return false;
+            }
+            if(pass!==confirmPass){
+                alert("password not match");
+            }
+            function showPass()
+            {
+                let input=document.getElementById("pass");
+                if(input.type=="password"){
+                    input.type="text";
+                }
+                else{
+                    input.type="password"
+                }
+                )
+            }
+            </script>
+            
+            </form>
+    </div>
+</body>
+</html>
