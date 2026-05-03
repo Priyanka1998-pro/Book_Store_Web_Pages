@@ -26,4 +26,5 @@ This project consists of four main web pages:
 2. Open `index.html` in any web browser.
 
 ## 🌐 Live Demo
-[Click here to view the live project](YOUR_GITHUB_PAGES_LINK_HERE)
+[[Click here to view the live project](YOUR_GITHUB_PAGES_LINK_HERE)
+](https://priyanka1998-pro.github.io/Book_Store_Web_Pages/)
